@@ -1,6 +1,10 @@
 const fs = require("fs");
 
-fs.appendFile("new.txt", " hip Hip Hureeeeeeeeeeee", (err) => {
-  if (err) console.log(error);
-  else console.log("File is Updated");
-});
+fs.writeFile(
+  "new.txt",
+  "This is new file created using node js fie system",
+  (err) => {
+    if (err) console.log(err);
+    else console.log("Done! File is created");
+  }
+);
