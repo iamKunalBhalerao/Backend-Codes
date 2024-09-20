@@ -1,10 +1,8 @@
-const fs = require("fs");
+const http = require("http");
 
-fs.writeFile(
-  "new.txt",
-  "This is new file created using node js fie system",
-  (err) => {
-    if (err) console.log(err);
-    else console.log("Done! File is created");
-  }
-);
+const server = http.createServer((rea, res) => {
+  res.end("Hello World");
+});
+
+server.listen(3000);
+console.log("Server is created at PORT:3000");
