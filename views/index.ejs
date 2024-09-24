@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="text-white">
     <div class="main w-full h-screen bg-zinc-900">
         <div class="form p-10">
             <form class="text-white">
@@ -16,10 +16,29 @@
                     placeholder="Title Goes Hear....">
                 <textarea class="block mt-2 px-5 py-2 w-full outline-none rounded-md bg-zinc-800 resize-none"
                     placeholder="Give about task...."></textarea>
-                <input class="mt-2 text-white bg-blue-500 px-2 py-1 rounded-md" type="submit" value="ADD TASK">
+                <input class="mt-2 text-white bg-blue-600 text-md px-5 py-2 rounded-md" type="submit" value="ADD TASK">
             </form>
         </div>
-        <div class="cards"></div>
+        <div class="cards flex gap-3 flex-wrap p-10">
+
+            <div class="task hidden w-72 px-3 py-4 bg-zinc-800 rounded-md">
+                <h1 class="text-3xl text-white tracking-tighter">Task title goes hear</h1>
+                <a class="text-blue-500 inline-block mt-3" href="#">Read More</a>
+            </div>
+
+            <div class="task hidden w-72 px-3 py-4 bg-zinc-800 rounded-md">
+                <h1 class="text-3xl text-white tracking-tighter">Task title goes hear</h1>
+                <a class="text-blue-500 inline-block mt-3" href="#">Read More</a>
+            </div>
+
+            <div class="task hidden w-72 px-3 py-4 bg-zinc-800 rounded-md">
+                <h1 class="text-3xl text-white tracking-tighter">Task title goes hear</h1>
+                <a class="text-blue-500 inline-block mt-3" href="#">Read More</a>
+            </div>
+
+            <h3 class="text-7xl text-zinc-400 font-bold">Did You Do Nothing Today!</h3>
+
+        </div>
     </div>
 </body>
 
