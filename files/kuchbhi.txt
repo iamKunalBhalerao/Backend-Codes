@@ -1,0 +1,1 @@
+technologyes used is node js express js tailwind CSS ejs etc
