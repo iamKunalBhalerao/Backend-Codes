@@ -1,5 +1,5 @@
 {
-  "name": "form-handling",
+  "name": "backend-project-1",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.10",
     "express": "^4.21.0"
   }
 }
