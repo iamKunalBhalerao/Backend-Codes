@@ -16,11 +16,12 @@ app.get("/create", async (req, res) => {
 });
 
 app.get("/update", async (req, res) => {
-  usermodel.findOneUpdate(
+  let updateduser = await usermodel.findOneAndUpdate(
     { username: "iamkunal" },
     { name: "Kunal Balu Bhalerao" },
     { new: true }
   );
+  res.send(updateduser);
 });
 
 app.listen(3000);
