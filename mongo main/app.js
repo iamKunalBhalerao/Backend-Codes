@@ -24,5 +24,10 @@ app.get("/update", async (req, res) => {
   res.send(updateduser);
 });
 
+app.get("/users", async (req, res) => {
+  let users = await usermodel.find();
+  res.send(users);
+});
+
 app.listen(3000);
 console.log("server is on PORT:3000");
