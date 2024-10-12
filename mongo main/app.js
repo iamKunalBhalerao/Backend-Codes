@@ -8,25 +8,30 @@ app.get("/", (req, res) => {
 
 app.get("/create", async (req, res) => {
   let createduser = await usermodel.create({
-    name: "Kunal Bhalerao",
-    username: "iamkunal",
-    email: "kunalbhalerao789@gmail.com",
+    name: "Prem Borawake",
+    username: "iamPrem",
+    email: "premborawake234@gmail.com",
   });
   res.send(createduser);
-});
-
-app.get("/update", async (req, res) => {
-  let updateduser = await usermodel.findOneAndUpdate(
-    { username: "iamkunal" },
-    { name: "Kunal Balu Bhalerao" },
-    { new: true }
-  );
-  res.send(updateduser);
 });
 
 app.get("/users", async (req, res) => {
   let users = await usermodel.find();
   res.send(users);
+});
+
+app.get("/update", async (req, res) => {
+  let updateduser = await usermodel.findOneAndUpdate(
+    { username: "iamPrem" },
+    { name: "Prem Girish Borawake" },
+    { new: true }
+  );
+  res.send(updateduser);
+});
+
+app.get("/delete", async (req, res) => {
+  let duser = await usermodel.findOneAndDelete({ username: "iamPrem" });
+  res.send(duser);
 });
 
 app.listen(3000);
